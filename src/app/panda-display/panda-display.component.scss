@@ -1,0 +1,28 @@
+.panda {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   height: 100%;
+   border: 1px solid rgba(128, 128, 128, 0.25);
+   border-radius: 8px;
+   margin-bottom: 8px;
+   padding: 20px;
+}
+
+.panda-container {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.panda-row {
+   display: flex;
+}
+
+.bi-gender-male {
+   color: blue;
+}
+
+.bi-gender-female {
+   color: palevioletred;
+}

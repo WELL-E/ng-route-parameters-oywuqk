@@ -1,0 +1,23 @@
+<div class="container">
+   <div *ngIf="panda" class="panda">
+      <div  class="panda-container">
+         <div class="panda-row">
+            <div [ngClass]="panda.sex === 'M' ? 'bi-gender-male' : 'bi-gender-female'">
+               {{ panda.name }}
+            </div>
+         </div>
+         <div class="panda-row">
+            <div class="bi-balloon-fill col-4">
+               {{ panda.birthDate | date: "dd/MM/YYYY" }}
+            </div>
+         </div>
+         <div class="panda-row">
+            <div class="bi-geo-alt col-8">
+               {{ panda.currentLocation }}
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <button class="btn btn-primary" [routerLink]="['/pandas']" queryParamsHandling="preserve">Back</button>
+</div>

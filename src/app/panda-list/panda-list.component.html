@@ -1,0 +1,17 @@
+<div class="container">
+  <input
+    type="text"
+    class="form-control mb-3"
+    [ngModel]="filterTerm"
+    (ngModelChange)="onFilterTermChange($event)"
+  />
+  <div *ngFor="let panda of filteredPandas">
+    <a
+      class="mt-1"
+      [routerLink]="['/pandas', panda.id]"
+      [queryParams]="filterTerm ? { filterTerm } : {}"
+    >
+      <span> {{ panda.name }}</span>
+    </a>
+  </div>
+</div>
